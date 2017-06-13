@@ -51,5 +51,7 @@ class App extends Component {
 }
 
 //Take Components generated html and put it into the DOM
-
+//<App /> is an instance of app rather than passing App itself which is a component class the
+//< /> is a JSX tag around it
+//ReactDOM takes the instance of what we are outputting as first param and, the location as the 2nd param.
 ReactDOM.render(<App/>, document.querySelector('.container'));
