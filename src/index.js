@@ -19,7 +19,8 @@ class App extends Component {
             videos : [],
             selectedVideo: null
         };
-
+        //because this is in constructor, it happens when the component loads. It calls the videoSearch
+        //function with the given term
         this.videoSearch('surfboards');
 
     }
@@ -28,7 +29,7 @@ class App extends Component {
         YTSearch({key: API_KEY, term: term}, (videos) => {
             //this is the same as { videos: videos } only works if key and variable is the same
             this.setState({
-                videos : videos,
+                videos,
                 selectedVideo: videos[0]
             });
         });

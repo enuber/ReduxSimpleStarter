@@ -5,10 +5,12 @@ import React, {Component} from 'react';
 // };
 
 class SearchBar extends Component {
-
+    //constructor is called automatically whenever a new instance is called/created
+    //reserved for setup like initializing variables
+    //whenever we use state we create a new object and assign it to this.state
+    //
     constructor(props) {
         super(props);
-
         this.state = {term: ''};
     }
 
